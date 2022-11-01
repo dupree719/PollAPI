@@ -15,6 +15,7 @@ public class Options {
     public Options() {
     }
 
+
     public Long getId() {
         return id;
     }
@@ -29,12 +30,11 @@ public class Options {
 
     public void setValue(String value) {
         this.value = value;
-
     }
 
     @Override
     public String toString() {
-        return "Options{" +
+        return "Option{" +
                 "id=" + id +
                 ", value='" + value + '\'' +
                 '}';

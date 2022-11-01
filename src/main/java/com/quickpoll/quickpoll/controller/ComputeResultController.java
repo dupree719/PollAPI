@@ -40,6 +40,7 @@ import java.util.Map;
                 optionCount.setCount(optionCount.getCount() + 1);
             }
             voteResult.setTotalVotes(totalVotes);
+            voteResult.setResults(tempMap.values());
 
             return new ResponseEntity<VoteResult>(voteResult, HttpStatus.OK);
         }

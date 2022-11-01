@@ -19,8 +19,8 @@ import javax.validation.Valid;
         }
 
         @PostMapping("/polls")
-        public ResponseEntity<?> createPoll(@Valid @RequestBody Poll poll) {
-           return pollService.createPoll(poll);
+        public void createPoll(@Valid @RequestBody Poll poll) {
+            pollService.createPoll(poll);
         }
 
 
@@ -30,14 +30,14 @@ import javax.validation.Valid;
         }
 
         @PutMapping("/polls/{pollId}")
-        public ResponseEntity<?> updatePoll(@RequestBody Poll poll, @PathVariable Long pollID) {
+        public void updatePoll(@RequestBody Poll poll, @PathVariable Long pollId) {
 
-           return pollService.updatePoll(poll, pollID);
+           pollService.updatePoll(poll, pollId);
         }
 
-        @DeleteMapping("/polls/{pollID}")
-        public ResponseEntity<?> deletePoll(@PathVariable Long pollId) {
+        @DeleteMapping("/polls/{pollId}")
+        public void deletePoll(@PathVariable Long pollId) {
 
-           return pollService.deletePoll(pollId);
+          pollService.deletePoll(pollId);
         }
 }

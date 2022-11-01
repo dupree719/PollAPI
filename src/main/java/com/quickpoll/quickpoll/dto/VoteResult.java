@@ -21,4 +21,11 @@ public class VoteResult {
         this.results = results;
     }
 
+    @Override
+    public String toString() {
+        return "VoteResult{" +
+                "totalVotes=" + totalVotes +
+                ", results=" + results +
+                '}';
+    }
 }
